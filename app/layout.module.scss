@@ -1,0 +1,22 @@
+.body {
+    display: grid;
+    grid-template-areas: "header header" "nav main";
+    grid-template-rows: auto 1fr;
+    grid-template-columns: auto 1fr;
+}
+
+.header {
+    grid-area: header;
+    background: #0d1117;
+    padding: 0.25rem 0.5rem;
+}
+
+.nav {
+    grid-area: nav;
+    background: #0d1117;
+}
+
+.main {
+    grid-area: main;
+    background: #010409;
+}

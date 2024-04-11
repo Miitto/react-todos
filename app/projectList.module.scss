@@ -1,0 +1,61 @@
+.dialog {
+    &::backdrop {
+        backdrop-filter: blur(5px);
+        background: #0005;
+    }
+
+    &[open] {
+        display: flex;
+    }
+
+    background-color: #0005;
+    backdrop-filter: blur(5px);
+    margin: auto;
+    border: 1px solid #5555;
+    border-radius: 15px;
+    min-height: min(300px, calc(100vh - 15px));
+    min-width: min(600px, calc(100vw - 15px));
+    padding: 0.5rem;
+
+    form {
+        display: grid;
+        grid-template-columns: auto 1fr;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        min-height: 100%;
+        gap: 0.5rem;
+
+        input[type="submit"],
+        button {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+        }
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+
+    &:last-of-type {
+        margin-bottom: 1rem;
+    }
+
+    &.active {
+        background: #0005;
+    }
+}
+
+.link:hover {
+    background: #0005;
+    outline: #5555 solid 1px;
+}
